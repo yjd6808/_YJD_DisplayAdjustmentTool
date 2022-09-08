@@ -1,0 +1,76 @@
+﻿<Window x:Class="DisplayAdjustmentGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DisplayAdjustmentGUI"
+        mc:Ignorable="d"
+        Title="디스플레이 감마램프" Height="450" Width="400"
+        Closing="MainWindow_OnClosing"
+        Loaded="MainWindow_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Name="_initBtn" Click="_initBtn_Click">초기화</Button>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">밝기</Label>
+            <Slider Name="_brightnessSlider" Grid.Column="1" Interval="1" Maximum="100" Minimum="0" Value="50" VerticalAlignment="Center" ValueChanged="SliderValue_Changed"></Slider>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">대비</Label>
+            <Slider Name="_contrastSlider" Grid.Column="1" Interval="1" Maximum="100" Minimum="0" Value="50" VerticalAlignment="Center" ValueChanged="SliderValue_Changed"></Slider>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">감마</Label>
+            <Slider Name="_gammaSlider" Grid.Column="1" Interval="1" Maximum="100" Minimum="0" Value="25" VerticalAlignment="Center" ValueChanged="SliderValue_Changed"></Slider>
+        </Grid>
+
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Name="_brightnessLabel" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">밝기 : </Label>
+            <Label Name="_contrastLabel" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">대비 : </Label>
+            <Label Name="_gammaLabel" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">감마 : </Label>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <ComboBox Name="_displayComboBox"></ComboBox>
+        </Grid>
+
+        <Button Grid.Row="6" Name="_saveGammaRampButtn" Click="_saveGammaRampButtn_OnClick">감마 램프 저장</Button>
+    </Grid>
+
+    
+
+</Window>

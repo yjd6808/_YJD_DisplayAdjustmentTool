@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DisplayAdjustmentGUI": {
+      "commandName": "Project",
+      //"commandLineArgs": "1 50 50 25"
+    }
+  }
+}
