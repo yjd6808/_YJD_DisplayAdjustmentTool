@@ -22,3 +22,10 @@
    프로젝트에 포함시킨 이유
    1. 타겟 프레임워크를 net6.0으로 변경시키기 위함
    2. 라이브러리의 일부 소스코드가 살짝 수정이 필요해서.
+
+
+소스코드:
+  DisplayAdjustmentGUI/App.xaml.cs
+  DisplayAdjustmentGUI/MainWindow.xaml
+  DisplayAdjustmentGUI/MainWindow.xaml.cs
+  
